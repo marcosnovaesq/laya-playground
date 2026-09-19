@@ -5,6 +5,14 @@ shared by [`laya-server`](../laya-server) and TypeSafe's Jev API. Build
 `choice`, `score`, and `noul` questions in a form, run them against a state,
 and see the answers rendered with probability bars, plus the raw JSON.
 
+<p align="center">
+  <img src="docs/screenshot-form.png" alt="laya-client1 with the example state and three questions filled in" width="700">
+</p>
+
+<p align="center">
+  <img src="docs/screenshot-results.png" alt="laya-client1 showing results returned by laya-server" width="700">
+</p>
+
 ## Run
 
 Any static file server works — the app is plain HTML/CSS/JS with no build step.

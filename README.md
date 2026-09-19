@@ -34,6 +34,18 @@ python3 -m http.server 5500
 Open http://localhost:5500, confirm the client's base URL points at
 `http://localhost:8000`, click **Ping /health**, then **Load example** and **Run**.
 
+## Screenshots
+
+<p align="center">
+  <img src="laya-client1/docs/screenshot-form.png" alt="laya-client1 with the example state and three questions (choice, score, noul) filled in" width="800"><br>
+  <sub>The example state and questions loaded via <strong>Load example</strong></sub>
+</p>
+
+<p align="center">
+  <img src="laya-client1/docs/screenshot-results.png" alt="laya-client1 showing results from laya-server: department=billing, urgency score, churn_risk noul" width="800"><br>
+  <sub>Results returned by <code>laya-server</code> after clicking <strong>Run</strong></sub>
+</p>
+
 ## Why
 
 `laya-server` lets you develop and test against the TypeSafe `/v1/systemone` contract without
