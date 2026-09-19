@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laya / Jev Playground</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Laya <span class="dim">/</span> Jev Playground</h1>
+  <p class="dim">Minimal client for the <code>POST /v1/systemone</code> contract shared by
+    <code>laya-server</code> and TypeSafe's Jev API. Build <code>choice</code>, <code>score</code> and
+    <code>noul</code> questions and run them against whichever server you point it at.</p>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Connection</h2>
+    <div class="row wrap">
+      <label>Base URL
+        <input id="baseUrl" type="text" value="http://localhost:8000">
+      </label>
+      <label>API key <span class="dim">(optional)</span>
+        <input id="apiKey" type="password" placeholder="Bearer token, e.g. LAYA_API_KEY">
+      </label>
+      <button id="pingBtn" type="button" class="secondary">Ping /health</button>
+      <span id="pingStatus" class="status"></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>State</h2>
+    <p class="dim">Plain text or JSON — the content your questions are evaluated against.</p>
+    <textarea id="stateInput" rows="6" spellcheck="false"></textarea>
+  </section>
+
+  <section class="panel">
+    <div class="row space-between">
+      <h2>Questions</h2>
+      <div class="row">
+        <button id="loadExampleBtn" type="button" class="secondary">Load example</button>
+        <button id="addQuestionBtn" type="button" class="secondary">+ Add question</button>
+      </div>
+    </div>
+    <div id="questions"></div>
+  </section>
+
+  <div class="run-row">
+    <button id="runBtn" type="button" class="primary">Run</button>
+    <span id="loadingIndicator" class="dim" hidden>Running…</span>
+  </div>
+
+  <div id="errorBanner" class="error-banner" hidden></div>
+
+  <section class="panel" id="resultsPanel" hidden>
+    <h2>Results</h2>
+    <div id="usage" class="dim"></div>
+    <div id="results"></div>
+    <details>
+      <summary>Raw JSON</summary>
+      <pre id="rawJson"></pre>
+    </details>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
